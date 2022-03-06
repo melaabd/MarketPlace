@@ -12,9 +12,9 @@ class ProductsSearchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationBar.prefersLargeTitles = true
-        view.backgroundColor = .lightGray
-        title = "Market Search"
+        setUpBG(title: Strings.searchVCTitle)
     }
 
 }
+
+extension ProductsSearchVC: AppTheme { }
