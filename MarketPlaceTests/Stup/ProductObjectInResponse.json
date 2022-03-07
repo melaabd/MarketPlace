@@ -1,0 +1,25 @@
+{
+    "productId": 785359,
+    "productName": "Apple iPhone 6 32GB Grijs",
+    "reviewInformation": {
+        "reviews": [],
+        "reviewSummary": {
+            "reviewAverage": 9.1,
+            "reviewCount": 952
+        }
+    },
+    "USPs": [
+    "32 GB opslagcapaciteit",
+    "4,7 inch Retina HD scherm",
+    "iOS 11"
+    ],
+    "availabilityState": 2,
+    "salesPriceIncVat": 369,
+    "productImage": "https://image.coolblue.nl/300x750/products/818870",
+    "coolbluesChoiceInformationTitle": "middenklasse iPhone",
+    "promoIcon": {
+        "text": "middenklasse iPhone",
+        "type": "coolblues-choice"
+    },
+    "nextDayDelivery": true
+}
