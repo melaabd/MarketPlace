@@ -31,11 +31,26 @@ class ProductsSearchVC: BaseTableVC {
         
         navigationController?.navigationBar.accessibilityIdentifier = AccessibilityIds.productsSearchNavigationBarId
         setupSearchBar()
+        tableView.register(ProductTVCell.self, forCellReuseIdentifier: ProductTVCell.identifier)
     }
     
     /// intialize search controller with setting properties
     private func setupSearchBar() {
-        
         navigationItem.searchController = searchController
     }
+}
+
+// MARK: - UITableViewDataSource
+extension ProductsSearchVC {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let noOfRows = 0
+        (noOfRows == 0) ? tableView.setEmptyView("No Results") : tableView.setEmptyView()
+        return noOfRows
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: ProductTVCell.identifier, for: indexPath) as? ProductTVCell ?? ProductTVCell()
+            return cell
+    }
+
 }
