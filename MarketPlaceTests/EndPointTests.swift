@@ -16,9 +16,16 @@ class EndPointTests: XCTestCase {
         let searchKeyword:String = "Apple"
         let components: Component = ["query": searchKeyword, "page": "\(page)"]
         let searEndPoint = EndPoint.searchInProducts(components: components)
-        XCTAssertEqual(searEndPoint.url, "https://bdk0sta2n0.execute-api.eu-west-1.amazonaws.com/ios-assignment/search")
+        let endPointUrlString = try! searEndPoint.asURL().absoluteString
+        let staticUrlString1 = "https://bdk0sta2n0.execute-api.eu-west-1.amazonaws.com/ios-assignment/search?page=\(page)&query=\(searchKeyword)"
+        let staticUrlString2 = "https://bdk0sta2n0.execute-api.eu-west-1.amazonaws.com/ios-assignment/search?query=\(searchKeyword)&page=\(page)"
+        
+        let isEqual = (endPointUrlString == staticUrlString1 ||  endPointUrlString == staticUrlString2 )
+        
+        
+        
         XCTAssertNoThrow(try searEndPoint.asURL())
-        XCTAssertEqual(try searEndPoint.asURL(), URL(string: "https://bdk0sta2n0.execute-api.eu-west-1.amazonaws.com/ios-assignment/search?page=\(page)&query=\(searchKeyword)"))
+        XCTAssertTrue(isEqual)
         
     }
 
