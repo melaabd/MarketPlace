@@ -29,6 +29,13 @@
 		0FEB10D927D61E68006273A9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB10D827D61E68006273A9 /* Product.swift */; };
 		0FEB10DB27D622A9006273A9 /* ProductCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB10DA27D622A9006273A9 /* ProductCellVM.swift */; };
 		0FEB10DE27D625F9006273A9 /* ProductObjectInResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FEB10DD27D625F9006273A9 /* ProductObjectInResponse.json */; };
+		0FEB10E127D62E0E006273A9 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB10E027D62E0E006273A9 /* HTTPMethod.swift */; };
+		0FEB10E327D62E43006273A9 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB10E227D62E43006273A9 /* EndPoint.swift */; };
+		0FEB10E527D62E6D006273A9 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB10E427D62E6D006273A9 /* Router.swift */; };
+		0FEB10E727D62E9F006273A9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB10E627D62E9F006273A9 /* APIManager.swift */; };
+		0FEB10EB27D6326D006273A9 /* ParamsDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB10EA27D6326D006273A9 /* ParamsDecoding.swift */; };
+		0FEB10ED27D63420006273A9 /* ResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB10EC27D63420006273A9 /* ResponseHandler.swift */; };
+		0FEB10EF27D63F79006273A9 /* EndPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB10EE27D63F79006273A9 /* EndPointTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +81,13 @@
 		0FEB10D827D61E68006273A9 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0FEB10DA27D622A9006273A9 /* ProductCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellVM.swift; sourceTree = "<group>"; };
 		0FEB10DD27D625F9006273A9 /* ProductObjectInResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ProductObjectInResponse.json; sourceTree = "<group>"; };
+		0FEB10E027D62E0E006273A9 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		0FEB10E227D62E43006273A9 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		0FEB10E427D62E6D006273A9 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		0FEB10E627D62E9F006273A9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		0FEB10EA27D6326D006273A9 /* ParamsDecoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamsDecoding.swift; sourceTree = "<group>"; };
+		0FEB10EC27D63420006273A9 /* ResponseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseHandler.swift; sourceTree = "<group>"; };
+		0FEB10EE27D63F79006273A9 /* EndPointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +144,7 @@
 				0F5CC2C427D50488000D2CC8 /* View */,
 				0F5CC2C527D50490000D2CC8 /* ViewModel */,
 				0F5CC2C627D50499000D2CC8 /* Model */,
+				0FEB10DF27D62DCD006273A9 /* NetworkLayer */,
 				0F5CC2C327D50447000D2CC8 /* UISupportFiles */,
 			);
 			path = MarketPlace;
@@ -140,6 +155,7 @@
 			children = (
 				0FEB10DC27D625D9006273A9 /* Stup */,
 				0F5CC2A727D50370000D2CC8 /* ProductCellVMTests.swift */,
+				0FEB10EE27D63F79006273A9 /* EndPointTests.swift */,
 			);
 			path = MarketPlaceTests;
 			sourceTree = "<group>";
@@ -284,6 +300,19 @@
 			path = Stup;
 			sourceTree = "<group>";
 		};
+		0FEB10DF27D62DCD006273A9 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				0FEB10E027D62E0E006273A9 /* HTTPMethod.swift */,
+				0FEB10E227D62E43006273A9 /* EndPoint.swift */,
+				0FEB10E427D62E6D006273A9 /* Router.swift */,
+				0FEB10E627D62E9F006273A9 /* APIManager.swift */,
+				0FEB10EC27D63420006273A9 /* ResponseHandler.swift */,
+				0FEB10EA27D6326D006273A9 /* ParamsDecoding.swift */,
+			);
+			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -416,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F5CC2D927D51FC6000D2CC8 /* BaseTableVC.swift in Sources */,
+				0FEB10ED27D63420006273A9 /* ResponseHandler.swift in Sources */,
 				0F5CC2D227D51A7E000D2CC8 /* Utils.swift in Sources */,
 				0F5CC2D627D51B0C000D2CC8 /* Assets.swift in Sources */,
 				0F5CC2CF27D51989000D2CC8 /* ExUIColor.swift in Sources */,
@@ -423,12 +453,17 @@
 				0FEB10D527D61AD6006273A9 /* TVCell.swift in Sources */,
 				0FEB10D727D61B62006273A9 /* ProductTVCell.swift in Sources */,
 				0F5CC2CC27D51957000D2CC8 /* AppTheme.swift in Sources */,
+				0FEB10E127D62E0E006273A9 /* HTTPMethod.swift in Sources */,
 				0F5CC2C827D50786000D2CC8 /* ProductsSearchVC.swift in Sources */,
+				0FEB10E527D62E6D006273A9 /* Router.swift in Sources */,
+				0FEB10E327D62E43006273A9 /* EndPoint.swift in Sources */,
+				0FEB10E727D62E9F006273A9 /* APIManager.swift in Sources */,
 				0F5CC2DB27D52025000D2CC8 /* GCD.swift in Sources */,
 				0F5CC2D427D51AE8000D2CC8 /* Constants.swift in Sources */,
 				0FEB10D227D61A36006273A9 /* ExUITableView.swift in Sources */,
 				0F5CC29127D5036E000D2CC8 /* AppDelegate.swift in Sources */,
 				0FEB10D927D61E68006273A9 /* Product.swift in Sources */,
+				0FEB10EB27D6326D006273A9 /* ParamsDecoding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +471,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FEB10EF27D63F79006273A9 /* EndPointTests.swift in Sources */,
 				0F5CC2A827D50370000D2CC8 /* ProductCellVMTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
