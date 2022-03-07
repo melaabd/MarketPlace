@@ -1,0 +1,106 @@
+{
+    
+    "products": [
+        {
+            "productId": 785359,
+            "productName": "Apple iPhone 6 32GB Grijs",
+            "reviewInformation": {
+                "reviews": [],
+                "reviewSummary": {
+                    "reviewAverage": 9.1,
+                    "reviewCount": 952
+                }
+            },
+            "USPs": [
+                "32 GB opslagcapaciteit",
+                "4,7 inch Retina HD scherm",
+                "iOS 11"
+            ],
+            "availabilityState": 2,
+            "salesPriceIncVat": 369,
+            "productImage": "https://image.coolblue.nl/300x750/products/818870",
+            "coolbluesChoiceInformationTitle": "middenklasse iPhone",
+            "promoIcon": {
+                "text": "middenklasse iPhone",
+                "type": "coolblues-choice"
+            },
+            "nextDayDelivery": true
+        },
+        {
+            "productId": 793277,
+            "productName": "Apple iPhone X 64GB Space Gray",
+            "reviewInformation": {
+                "reviews": [],
+                "reviewSummary": {
+                    "reviewAverage": 9.2,
+                    "reviewCount": 209
+                }
+            },
+            "USPs": [
+                "64 GB opslagcapaciteit",
+                "5,8 inch Retina HD scherm",
+                "iOS 11"
+            ],
+            "availabilityState": 2,
+            "salesPriceIncVat": 1079,
+            "productImage": "https://image.coolblue.nl/300x750/products/982902",
+            "coolbluesChoiceInformationTitle": "een topklasse iPhone",
+            "promoIcon": {
+                "text": "een topklasse iPhone",
+                "type": "coolblues-choice"
+            },
+            "nextDayDelivery": true
+        },
+        {
+            "productId": 793664,
+            "productName": "Apple iPhone 8 64GB Space Grey",
+            "reviewInformation": {
+                "reviews": [],
+                "reviewSummary": {
+                    "reviewAverage": 9.3,
+                    "reviewCount": 277
+                }
+            },
+            "USPs": [
+                "64 GB opslagcapaciteit",
+                "4,7 inch Retina HD scherm",
+                "iOS 11"
+            ],
+            "availabilityState": 2,
+            "salesPriceIncVat": 769,
+            "productImage": "https://image.coolblue.nl/300x750/products/984093",
+            "nextDayDelivery": true
+        },
+        {
+            "productId": 809680,
+            "productName": "Apple iPad (2018) 128GB Wifi Space Gray",
+            "reviewInformation": {
+                "reviews": [],
+                "reviewSummary": {
+                    "reviewAverage": 9.6,
+                    "reviewCount": 75
+                }
+            },
+            "USPs": [
+                "9,7 inch Retina scherm",
+                "Internet alleen via wifi",
+                "128 GB opslagcapaciteit"
+            ],
+            "availabilityState": 2,
+            "salesPriceIncVat": 449,
+            "productImage": "https://image.coolblue.nl/300x750/products/1010388",
+            "coolbluesChoiceInformationTitle": "een middenklasse iPad",
+            "promoIcon": {
+                "text": "een middenklasse iPad",
+                "type": "coolblues-choice"
+            },
+            "nextDayDelivery": true
+        }
+    ],
+    "currentPage": 1,
+    "pageSize": 4,
+    "totalResults": 70,
+    "pageCount": 3
+    
+}
+

@@ -8,5 +8,7 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
+	<key>Configuration</key>
+	<string>$(CONFIGURATION)</string>
 </dict>
 </plist>

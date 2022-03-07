@@ -7,6 +7,9 @@
 
 import UIKit
 
+typealias StatusCompletion = ((_ isLoading:Bool)->Void)
+typealias Completion = (()->Void)
+
 struct Utils {
     
     /// get dynamic height depending on screen height
