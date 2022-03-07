@@ -12,6 +12,12 @@ class ProductTVCell: UITableViewCell, TVCell {
     
     static var identifier: String = "ProductTVCell"
     
+    var cellVM: ProductCellVM? {
+        didSet {
+            fillData()
+        }
+    }
+    
     lazy private var containerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -141,7 +147,17 @@ class ProductTVCell: UITableViewCell, TVCell {
     }
     
     func fillData() {
-        /// will be called when data ready
+        GCD.onMain { [weak self] in
+            guard let self = self, let vm = self.cellVM else { return }
+            self.nameLabel.text = vm.name
+            self.reviewLabel.text = vm.review
+            self.USPsLabel.text = vm.USPs
+            self.priceLabel.text = vm.price
+        }
+        
+        if let imgUrl = cellVM?.imageUrl {
+            imgView.loadRemoteImageFrom(url: imgUrl)
+        }
     }
 
 }

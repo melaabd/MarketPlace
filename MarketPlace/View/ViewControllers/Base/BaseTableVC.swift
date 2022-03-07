@@ -94,4 +94,4 @@ extension BaseTableVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 // MARK: - conform wiht commen protocols
-extension BaseTableVC: AppTheme {}
+extension BaseTableVC: AppTheme, AlertDelegate {}

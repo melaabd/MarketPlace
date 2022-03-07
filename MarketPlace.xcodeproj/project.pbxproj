@@ -43,6 +43,8 @@
 		0FEB110427D670D2006273A9 /* MocksServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB10F927D652DD006273A9 /* MocksServices.swift */; };
 		0FEB110727D688C7006273A9 /* ProductsSearshResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FEB10F527D65230006273A9 /* ProductsSearshResponse.json */; };
 		0FEB110827D68A4F006273A9 /* ProductObjectInResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FEB10F727D65259006273A9 /* ProductObjectInResponse.json */; };
+		0FEB110A27D68D3E006273A9 /* EXUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB110927D68D3E006273A9 /* EXUIImageView.swift */; };
+		0FEB110C27D68E14006273A9 /* ExString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB110B27D68E14006273A9 /* ExString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		0FEB10FB27D65AA4006273A9 /* ProductsSearchVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsSearchVMTests.swift; sourceTree = "<group>"; };
 		0FEB10FF27D66220006273A9 /* ProductsSearchVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsSearchVM.swift; sourceTree = "<group>"; };
 		0FEB110127D664B6006273A9 /* AlertDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDelegate.swift; sourceTree = "<group>"; };
+		0FEB110927D68D3E006273A9 /* EXUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXUIImageView.swift; sourceTree = "<group>"; };
+		0FEB110B27D68E14006273A9 /* ExString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExString.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +274,8 @@
 			children = (
 				0F5CC2CE27D51989000D2CC8 /* ExUIColor.swift */,
 				0FEB10D127D61A35006273A9 /* ExUITableView.swift */,
+				0FEB110927D68D3E006273A9 /* EXUIImageView.swift */,
+				0FEB110B27D68E14006273A9 /* ExString.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -485,6 +491,7 @@
 				0FEB10F427D6469B006273A9 /* NetworkService.swift in Sources */,
 				0F5CC2D927D51FC6000D2CC8 /* BaseTableVC.swift in Sources */,
 				0FEB10ED27D63420006273A9 /* ResponseHandler.swift in Sources */,
+				0FEB110A27D68D3E006273A9 /* EXUIImageView.swift in Sources */,
 				0F5CC2D227D51A7E000D2CC8 /* Utils.swift in Sources */,
 				0F5CC2D627D51B0C000D2CC8 /* Assets.swift in Sources */,
 				0F5CC2CF27D51989000D2CC8 /* ExUIColor.swift in Sources */,
@@ -500,6 +507,7 @@
 				0FEB10E727D62E9F006273A9 /* APIManager.swift in Sources */,
 				0F5CC2DB27D52025000D2CC8 /* GCD.swift in Sources */,
 				0F5CC2D427D51AE8000D2CC8 /* Constants.swift in Sources */,
+				0FEB110C27D68E14006273A9 /* ExString.swift in Sources */,
 				0FEB110427D670D2006273A9 /* MocksServices.swift in Sources */,
 				0FEB10D227D61A36006273A9 /* ExUITableView.swift in Sources */,
 				0F5CC29127D5036E000D2CC8 /* AppDelegate.swift in Sources */,
