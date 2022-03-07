@@ -36,8 +36,8 @@ class ProductsSearchVMTests: XCTestCase {
     }
     
     func test_search_history() {
-        productsSearchVM.searchHistory.insert("Apple")
-        productsSearchVM.searchHistory.insert("Ap")
+        productsSearchVM.searchForProducts(keyword:"Apple")
+        productsSearchVM.searchForProducts(keyword:"Ap")
         
         XCTAssertEqual(productsSearchVM.searchHistory.count, 2)
         productsSearchVM.filterHistory(txt: "ap")
@@ -46,8 +46,19 @@ class ProductsSearchVMTests: XCTestCase {
         productsSearchVM.filterHistory(txt: "apple")
         XCTAssertEqual(productsSearchVM.filteredSearchHistory.count, 1)
         
-        productsSearchVM.searchHistory.remove("Apple")
-        XCTAssertEqual(productsSearchVM.filteredSearchHistory.count, 1)
+        productsSearchVM.removeSearchHistoryItem(item: "Apple", idx: 0)
+        XCTAssertEqual(productsSearchVM.searchHistory.count, 1)
+    }
+    
+    func test_cancel_search_functionality() {
+        productsSearchVM.searchForProducts(keyword: "something")
+        XCTAssertEqual(productsSearchVM.currentSearch, "something")
+        XCTAssertEqual(productsSearchVM.products.count, 4)
+        XCTAssertEqual(productsSearchVM.productsVMs.count, 4)
+        
+        productsSearchVM.cancelSearch()
+        XCTAssertEqual(productsSearchVM.products.count, 0)
+        XCTAssertEqual(productsSearchVM.productsVMs.count, 0)
     }
     
     override func tearDown() {

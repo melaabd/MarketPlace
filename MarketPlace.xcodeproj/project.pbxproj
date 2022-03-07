@@ -47,6 +47,7 @@
 		0FEB110C27D68E14006273A9 /* ExString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB110B27D68E14006273A9 /* ExString.swift */; };
 		0FEB111627D696EC006273A9 /* SearchHistoryTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB111527D696EC006273A9 /* SearchHistoryTVCell.swift */; };
 		0FEB111827D69730006273A9 /* SearchHistoryCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB111727D69730006273A9 /* SearchHistoryCellVM.swift */; };
+		0FEB111A27D6AD0A006273A9 /* GCDTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB111927D6AD0A006273A9 /* GCDTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		0FEB110B27D68E14006273A9 /* ExString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExString.swift; sourceTree = "<group>"; };
 		0FEB111527D696EC006273A9 /* SearchHistoryTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryTVCell.swift; sourceTree = "<group>"; };
 		0FEB111727D69730006273A9 /* SearchHistoryCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryCellVM.swift; sourceTree = "<group>"; };
+		0FEB111927D6AD0A006273A9 /* GCDTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GCDTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +183,7 @@
 				0F5CC2A727D50370000D2CC8 /* ProductCellVMTests.swift */,
 				0FEB10EE27D63F79006273A9 /* EndPointTests.swift */,
 				0FEB10FB27D65AA4006273A9 /* ProductsSearchVMTests.swift */,
+				0FEB111927D6AD0A006273A9 /* GCDTest.swift */,
 			);
 			path = MarketPlaceTests;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 			files = (
 				0FEB10EF27D63F79006273A9 /* EndPointTests.swift in Sources */,
 				0FEB10FC27D65AA4006273A9 /* ProductsSearchVMTests.swift in Sources */,
+				0FEB111A27D6AD0A006273A9 /* GCDTest.swift in Sources */,
 				0F5CC2A827D50370000D2CC8 /* ProductCellVMTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
