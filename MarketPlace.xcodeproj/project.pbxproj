@@ -45,6 +45,8 @@
 		0FEB110827D68A4F006273A9 /* ProductObjectInResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 0FEB10F727D65259006273A9 /* ProductObjectInResponse.json */; };
 		0FEB110A27D68D3E006273A9 /* EXUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB110927D68D3E006273A9 /* EXUIImageView.swift */; };
 		0FEB110C27D68E14006273A9 /* ExString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB110B27D68E14006273A9 /* ExString.swift */; };
+		0FEB111627D696EC006273A9 /* SearchHistoryTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB111527D696EC006273A9 /* SearchHistoryTVCell.swift */; };
+		0FEB111827D69730006273A9 /* SearchHistoryCellVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEB111727D69730006273A9 /* SearchHistoryCellVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,8 @@
 		0FEB110127D664B6006273A9 /* AlertDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDelegate.swift; sourceTree = "<group>"; };
 		0FEB110927D68D3E006273A9 /* EXUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EXUIImageView.swift; sourceTree = "<group>"; };
 		0FEB110B27D68E14006273A9 /* ExString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExString.swift; sourceTree = "<group>"; };
+		0FEB111527D696EC006273A9 /* SearchHistoryTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryTVCell.swift; sourceTree = "<group>"; };
+		0FEB111727D69730006273A9 /* SearchHistoryCellVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryCellVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +243,7 @@
 			children = (
 				0FEB10DA27D622A9006273A9 /* ProductCellVM.swift */,
 				0FEB10FF27D66220006273A9 /* ProductsSearchVM.swift */,
+				0FEB111727D69730006273A9 /* SearchHistoryCellVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 			children = (
 				0FEB10D427D61AD6006273A9 /* TVCell.swift */,
 				0FEB10D627D61B62006273A9 /* ProductTVCell.swift */,
+				0FEB111527D696EC006273A9 /* SearchHistoryTVCell.swift */,
 			);
 			path = TVCells;
 			sourceTree = "<group>";
@@ -494,6 +500,7 @@
 				0FEB110A27D68D3E006273A9 /* EXUIImageView.swift in Sources */,
 				0F5CC2D227D51A7E000D2CC8 /* Utils.swift in Sources */,
 				0F5CC2D627D51B0C000D2CC8 /* Assets.swift in Sources */,
+				0FEB111627D696EC006273A9 /* SearchHistoryTVCell.swift in Sources */,
 				0F5CC2CF27D51989000D2CC8 /* ExUIColor.swift in Sources */,
 				0FEB10DB27D622A9006273A9 /* ProductCellVM.swift in Sources */,
 				0FEB10D527D61AD6006273A9 /* TVCell.swift in Sources */,
@@ -504,6 +511,7 @@
 				0F5CC2C827D50786000D2CC8 /* ProductsSearchVC.swift in Sources */,
 				0FEB10E527D62E6D006273A9 /* Router.swift in Sources */,
 				0FEB10E327D62E43006273A9 /* EndPoint.swift in Sources */,
+				0FEB111827D69730006273A9 /* SearchHistoryCellVM.swift in Sources */,
 				0FEB10E727D62E9F006273A9 /* APIManager.swift in Sources */,
 				0F5CC2DB27D52025000D2CC8 /* GCD.swift in Sources */,
 				0F5CC2D427D51AE8000D2CC8 /* Constants.swift in Sources */,

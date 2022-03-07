@@ -35,6 +35,21 @@ class ProductsSearchVMTests: XCTestCase {
         XCTAssertEqual(productsSearchVM.productsVMs.count, 4)
     }
     
+    func test_search_history() {
+        productsSearchVM.searchHistory.insert("Apple")
+        productsSearchVM.searchHistory.insert("Ap")
+        
+        XCTAssertEqual(productsSearchVM.searchHistory.count, 2)
+        productsSearchVM.filterHistory(txt: "ap")
+        XCTAssertEqual(productsSearchVM.filteredSearchHistory.count, 2)
+        
+        productsSearchVM.filterHistory(txt: "apple")
+        XCTAssertEqual(productsSearchVM.filteredSearchHistory.count, 1)
+        
+        productsSearchVM.searchHistory.remove("Apple")
+        XCTAssertEqual(productsSearchVM.filteredSearchHistory.count, 1)
+    }
+    
     override func tearDown() {
         super.tearDown()
         

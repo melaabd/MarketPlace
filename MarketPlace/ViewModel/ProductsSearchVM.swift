@@ -36,6 +36,10 @@ class ProductsSearchVM {
     /// products cell view models
     var productsVMs:[ProductCellVM] = []
     
+    // search history properties
+    var filteredSearchHistory:[String] = []
+    var searchHistory:Set<String> = []
+    
     let service:NetworkService = NetworkServiceFactory.create()
     
     
@@ -44,6 +48,7 @@ class ProductsSearchVM {
     ///   - keyword: `String`
     ///   - page: `Int`
     func searchForProducts(keyword: String, page: Int = 1) {
+        searchHistory.insert(keyword)
         currentSearch = keyword
         currentPage = page
         loading?(true)
@@ -90,4 +95,25 @@ class ProductsSearchVM {
         reload?()
     }
     
+}
+
+
+// MARK: - handle search history data
+extension ProductsSearchVM {
+    
+    /// filter in search history
+    /// - Parameter txt: `String`
+    func filterHistory(txt: String) {
+        loading?(false)
+        filteredSearchHistory = searchHistory.filter{$0.lowercased().contains(txt.lowercased())}
+        reload?()
+    }
+    
+    /// remove item from old history
+    /// - Parameter item: `String`
+    func removeSearchHistoryItem(item: String, idx: Int) {
+        searchHistory.remove(item)
+        filteredSearchHistory.remove(at: idx)
+        reload?()
+    }
 }

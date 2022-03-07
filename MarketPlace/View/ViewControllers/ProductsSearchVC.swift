@@ -24,6 +24,7 @@ class ProductsSearchVC: BaseTableVC {
     
     
     private var productsSearchVM: ProductsSearchVM?
+    private var shouldShowhHistory:Bool = false
     
     override func viewDidLoad() {
         setUpBG(title: Str.searchVCTitle)
@@ -41,6 +42,7 @@ class ProductsSearchVC: BaseTableVC {
         navigationController?.navigationBar.accessibilityIdentifier = AccessibilityIds.productsSearchNavigationBarId
         setupSearchBar()
         tableView.register(ProductTVCell.self, forCellReuseIdentifier: ProductTVCell.identifier)
+        tableView.register(SearchHistoryTVCell.self, forCellReuseIdentifier: SearchHistoryTVCell.identifier)
     }
     
     /// intialize search controller with setting properties
@@ -55,16 +57,29 @@ class ProductsSearchVC: BaseTableVC {
 // MARK: - UITableViewDataSource
 extension ProductsSearchVC {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let noOfRows = productsSearchVM?.productsVMs.count ?? 0
+        let noOfRows = shouldShowhHistory ? productsSearchVM?.filteredSearchHistory.count ?? 0 : productsSearchVM?.productsVMs.count ?? 0
         (noOfRows == 0) ? tableView.setEmptyView("No Results") : tableView.setEmptyView()
         return noOfRows
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: ProductTVCell.identifier, for: indexPath) as? ProductTVCell ?? ProductTVCell()
-        let cellVM = productsSearchVM?.productsVMs[indexPath.row]
-        cell.cellVM = cellVM
+        
+        if shouldShowhHistory {
+            let cell = tableView.dequeueReusableCell(withIdentifier: SearchHistoryTVCell.identifier, for: indexPath) as? SearchHistoryTVCell ?? SearchHistoryTVCell()
+            
+            guard let itemTitle = productsSearchVM?.filteredSearchHistory[indexPath.item] else { return cell }
+            cell.cellVM = SearchHistoryCellVM(title: itemTitle)
+            cell.removeItemCompletion = { [weak self] in
+                guard let self = self, let title = cell.cellVM?.title else { return }
+                self.productsSearchVM?.removeSearchHistoryItem(item: title, idx: indexPath.row)
+            }
             return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: ProductTVCell.identifier, for: indexPath) as? ProductTVCell ?? ProductTVCell()
+            let cellVM = productsSearchVM?.productsVMs[indexPath.row]
+            cell.cellVM = cellVM
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -72,6 +87,12 @@ extension ProductsSearchVC {
         if tableView.isLast(for: indexPath) {
             productsSearchVM?.loadNextPage()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard shouldShowhHistory, let itemTxt = productsSearchVM?.filteredSearchHistory[indexPath.item] else { return }
+        searchController.searchBar.text = itemTxt
+        searchBarSearchButtonClicked(searchController.searchBar)
     }
 
 }
@@ -85,6 +106,7 @@ extension ProductsSearchVC: UISearchControllerDelegate {
     }
     
     func willDismissSearchController(_ searchController: UISearchController) {
+        shouldShowhHistory = false
         reloadData()
     }
 }
@@ -93,10 +115,11 @@ extension ProductsSearchVC: UISearchControllerDelegate {
 extension ProductsSearchVC: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         productsSearchVM?.cancelSearch()
+        shouldShowhHistory = false
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
+        shouldShowhHistory = false
         searchBar.resignFirstResponder()
 
         guard let keyword = searchBar.text, keyword.notEmpty()  else {
@@ -110,6 +133,16 @@ extension ProductsSearchVC: UISearchBarDelegate {
         ///Start search
         loadingLbl.text = Str.searchingMsg
         productsSearchVM?.searchForProducts(keyword: keyword)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard let txt = searchBar.text, txt.notEmpty()  else {
+            shouldShowhHistory = false
+            reloadData()
+            return
+        }
+        shouldShowhHistory = true
+        productsSearchVM?.filterHistory(txt: txt)
     }
 }
 
